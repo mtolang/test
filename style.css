@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(3, 189, 202);
+}
+.img-container {
+    padding: 1rem;
+    background-color: #fff;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+.images-a {
+    display: inline-flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0d92bb;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.hero-image {
+    height: 135px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.hero {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+}
+
+.hero:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hero__content {
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+}
+
+.hero__footer {
+    text-align: right;
+}
+
+.hero__close {
+    position: absolute;
+    top: 0.25rem;
+    right: 2rem;
+    color: rgb(94, 233, 243);
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.hero_popup-content{
+    max-width: 700px;
+}
+.hero_popup-content img{
+    max-width: 100%;
+}
